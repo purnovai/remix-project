@@ -102,7 +102,8 @@ let requiredModules = [
   'amp',
   'vega',
   'chartjs',
-  'storageMonitor'
+  'storageMonitor',
+  'udappEnv'
 ]
 
 // dependentModules shouldn't be manually activated (e.g hardhat is activated by remixd)
@@ -173,7 +174,8 @@ export function isNative(name) {
     'amp',
     'vega',
     'chartjs',
-    'quick-dapp-v2'
+    'quick-dapp-v2',
+    'udappEnv'
   ]
   return nativePlugins.includes(name) || requiredModules.includes(name) || isInjectedProvider(name) || isVM(name) || isScriptRunner(name)
 }
