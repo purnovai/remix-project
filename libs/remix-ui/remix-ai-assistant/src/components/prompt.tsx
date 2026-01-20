@@ -33,7 +33,6 @@ export interface PromptAreaProps {
   textareaRef?: React.RefObject<HTMLTextAreaElement>
   maximizePanel: () => Promise<void>
   isMaximized: boolean
-  setIsMaximized: React.Dispatch<React.SetStateAction<boolean>>
   themeTracker: any
 }
 
@@ -62,7 +61,6 @@ export const PromptArea: React.FC<PromptAreaProps> = ({
   textareaRef,
   maximizePanel,
   isMaximized,
-  setIsMaximized,
   themeTracker
 }) => {
   const { trackMatomoEvent: baseTrackEvent } = useContext(TrackingContext)
