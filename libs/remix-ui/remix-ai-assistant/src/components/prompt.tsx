@@ -95,6 +95,7 @@ export const PromptArea: React.FC<PromptAreaProps> = ({
               className="form-control bg-light border-0"
               value={input}
               disabled={isStreaming}
+              data-id="remix-ai-composer-input"
               onFocus={() => {
                 if (!isMaximized) {
                   maximizePanel()
