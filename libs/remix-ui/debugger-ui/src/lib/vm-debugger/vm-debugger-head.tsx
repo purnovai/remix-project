@@ -125,8 +125,8 @@ export const VmDebuggerHead = ({ vmDebugger: { registerEvent, triggerEvent }, de
       })
     registerEvent &&
       registerEvent('solidityLocalsMessage', (message) => {
-        setSolidityLocals(() => {
-          return { calldata: {}, message }
+        setSolidityLocals((state) => {
+          return { calldata: state.calldata, message }
         })
       })
 

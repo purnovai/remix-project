@@ -118,6 +118,8 @@ export class SymbolicStackManager {
         originStep: variable.declarationStep,
         isParameter: variable.isParameter || false
       }
+      stack[stackIndex].variableType.abi = variable.abi
+      stack[stackIndex].variableType.name = variable.name
       // console.log(`Bound variable ${variable.name} at step ${step} to stack index ${stackIndex}`, stack)
     } else {
       // This should not happen if stackIndex is correctly set (> 0)

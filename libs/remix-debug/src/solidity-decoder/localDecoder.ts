@@ -23,7 +23,7 @@ export async function solidityLocals (vmtraceIndex, internalTreeCall, stack, mem
       anonymousIncr++
     }
     try {
-      locals[name] = await variable.slot.variableType.decodeFromStack(variable.position, stack, memory, storageResolver, calldata, cursor, variable)
+      locals[name] = await variable.slot.variableType.decodeFromStack(variable.position, stack, memory, storageResolver, calldata, cursor, variable.slot.variableType)
     } catch (e) {
       console.log(e)
       locals[name] = { error: '<decoding failed - ' + e.message + '>', type: variable && variable.slot.variableName && variable.slot.variableType.typeName || 'unknown' }
