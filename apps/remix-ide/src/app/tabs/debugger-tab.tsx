@@ -29,7 +29,7 @@ const profile = {
     'getAllDebugCache',
     'getCurrentSourceLocation'
   ],
-  events: [],
+  events: ['debuggingStarted', 'debuggingStopped', 'debuggingStepChanged'],
   icon: 'assets/img/debuggerLogo.webp',
   description: 'Debug transactions',
   kind: 'debugging',
